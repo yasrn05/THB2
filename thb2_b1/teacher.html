@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Teacher</title>
+</head>
+
+<body>
+    <div class="navbar"></div>
+    <div class="sidebar">
+        <div class="logo"></div>
+        <ul class="menu">
+            <li class="first-item">
+                <i class='bx bxs-home'></i>
+                <a href="#">Trang Chủ</a>
+            </li>
+            <li><a href="#">Quản lý khoa</a></li>
+            <li><a href="#">Quản lý chuyên ngành</a></li>
+            <li><a href="#">Quản lý Hệ đào tạo</a></li>
+            <li><a href="#">Quản lý Niên khóa</a></li>
+            <li><a href="#">Quản lý Lớp</a></li>
+            <li><a href="teacher.html">Quản lý Giáo viên</a></li>
+            <li><a href="#">Quản lý Hội đồng</a></li>
+            <li><a href="#">Quản lý sinh viên</a></li>
+            <li><a href="project.html">Danh sách đồ án</a></li>
+            <li><a href="#">Quản lý</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <h1>Danh sách giáo viên</h1>
+        <div class="toolbar">
+            <div class="toolbar-left">
+                <a href="#" class="home-link"><i class="fas fa-home"></i></a>
+                <span class="toolbar-title">Danh sách giáo viên</span>
+            </div>
+            <div class="toolbar-right">
+                <button id="btnAdd" class="action-btn">Thêm mới</button>
+            </div>
+        </div>
+        <div class="filter-bar">
+            <select id="filterDepartment">
+                <option value="">Chọn khoa</option>
+                <option value="Toán">Toán</option>
+                <option value="Ngữ văn">Ngữ văn</option>
+            </select>
+            <select id="filterMajor">
+                <option value="">Chọn chuyên ngành</option>
+                <option value="Toán học">Toán học</option>
+                <option value="Văn học">Văn học</option>
+            </select>
+            <button id="btnRefresh" class="action-btn">Tìm kiếm</button>
+            <button id="btnSearch" class="action-btn">Làm mới</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Hình ảnh</th>
+                    <th>Tên giáo viên</th>
+                    <th>Thông tin</th>
+                    <th>Khoa</th>
+                    <th>Chuyên ngành</th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="teacher1.jpg" alt="Giáo viên 1" class="teacher-image"></td>
+                    <td>Hổ</td>
+                    <td class="teacher-info">
+                        <ul>
+                            <li>Giáo viên chính</li>
+                            <li>Kinh nghiệm: 10 năm</li>
+                            <li>Địa chỉ: Hà Nội</li>
+                        </ul>
+                    </td>
+                    <td>Toán</td>
+                    <td>Toán học</td>
+                    <td>
+                        <button class="action-btn">Sửa</button>
+                        <button class="action-btn">Xóa</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="teacher2.jpg" alt="Giáo viên 2" class="teacher-image"></td>
+                    <td>Sóc</td>
+                    <td class="teacher-info">
+                        <ul>
+                            <li>Giáo viên chính</li>
+                            <li>Kinh nghiệm: 10 năm</li>
+                            <li>Địa chỉ: Hà Nội</li>
+                        </ul>
+                    </td>
+                    <td>Ngữ văn</td>
+                    <td>Văn học</td>
+                    <td>
+                        <button class="action-btn">Sửa</button>
+                        <button class="action-btn">Xóa</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biểu Đồ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="navbar"></div>
+    <div class="sidebar">
+        <div class="logo"></div>
+        <ul class="menu">
+            <li class="first-item">
+                <i class='bx bxs-home'></i>
+                <a href="#">Trang Chủ</a>
+            </li>
+            <li><a href="1.html">Scatter Plot</a></li>
+            <li><a href="2.html">Line Chart</a></li>
+            <li><a href="3.html">Barr Chart</a></li>
+            <li><a href="4.html">Pie Chart</a></li>
+            <li><a href="5.html">Donut Chart</a></li>
+            <li><a href="6.html">Bubble Chart</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <h3>Tên: Bubble Chart (Biểu đồ bong bóng)</h3>
+        <h3>Mô tả: Biểu đồ bong bóng là một loại biểu đồ sử dụng bong bóng có kích thước khác nhau để biểu diễn ba biến
+            số. Trong đó, trục x và y biểu thị hai biến số, trong khi kích thước của bong bóng biểu thị một biến số thứ
+            ba, tạo ra một cách để so sánh ba giá trị cùng một lúc.
+        </h3>
+        <div id="myPlot" class="chart-container"> </div>
+    </div>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <script>
+        const xArray = [1, 2, 3, 4];
+        const yArray = [10, 20, 30, 40];
+
+        const trace1 = {
+            x: xArray,
+            y: yArray,
+            mode: 'markers',
+            marker: {
+                color: ['red', 'green', 'blue', 'orange'],
+                size: [20, 30, 40, 50]
+            }
+        };
+
+        const trace2 = {
+            x: [1, 2, 3, 4],
+            y: [15, 30, 45, 60],
+            mode: 'markers',
+            marker: {
+                color: 'rgb(31, 119, 180)',
+                size: 18,
+                symbol: ['circle', 'square', 'diamond', 'cross']
+            },
+        };
+
+        const data = [trace1, trace2];
+
+        const layout = {
+            title: "Plotting Bubbles"
+        };
+
+        Plotly.newPlot('myPlot', data, layout);
+    </script>
+</body>
+
+</html>

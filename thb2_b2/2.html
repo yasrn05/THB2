@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biểu Đồ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="navbar"></div>
+    <div class="sidebar">
+        <div class="logo"></div>
+        <ul class="menu">
+            <li class="first-item">
+                <i class='bx bxs-home'></i>
+                <a href="#">Trang Chủ</a>
+            </li>
+            <li><a href="1.html">Scatter Plot</a></li>
+            <li><a href="2.html">Line Chart</a></li>
+            <li><a href="3.html">Barr Chart</a></li>
+            <li><a href="4.html">Pie Chart</a></li>
+            <li><a href="5.html">Donut Chart</a></li>
+            <li><a href="6.html">Bubble Chart</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <h3>Tên: Line Chart (Biểu đồ đường)</h3>
+        <h3>Mô tả: Biểu đồ đường là biểu đồ dùng để biểu diễn sự thay đổi của một biến số qua thời gian hoặc giữa các
+            điểm dữ liệu. Các điểm trên biểu đồ được kết nối bằng đường thẳng, tạo ra một đường cong thể hiện xu hướng
+            hoặc biến động của dữ liệu.
+        </h3>
+        <div id="myPlot" class="chart-container"> </div>
+    </div>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <script>
+        const xArray = [50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150];
+        const yArray = [7, 8, 8, 9, 9, 9, 10, 11, 14, 14, 15];
+
+        const data = [{
+            x: xArray,
+            y: yArray,
+            mode: "lines"
+        }];
+
+        const layout = {
+            xaxis: { range: [40, 160], title: "Square Meters" },
+            yaxis: { range: [5, 16], title: "Price in Millions" },
+            title: "House Prices vs. Size"
+        };
+
+        Plotly.newPlot("myPlot", data, layout);
+    </script>
+</body>
+
+</html>
